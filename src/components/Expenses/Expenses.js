@@ -17,8 +17,10 @@ function Expenses(props) {
           selected={filterYear}
           onFilterChange={filterChangeEvent}
         />
-        {props.items.foreach((element) => {
-          console.log(element);
+        {props.items.map((e) => {
+          return (
+            <ExpenseItem title={e.title} amount={e.amount} date={e.date} />
+          );
         })}
       </Card>
     </div>
