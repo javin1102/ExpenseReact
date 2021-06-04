@@ -61,8 +61,10 @@ const ExtenseForm = (props) => {
     setEnteredAmount("");
     setEnteredDate("");
   };
+
   return (
     <form onSubmit={submitHandler}>
+      {}
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -95,6 +97,9 @@ const ExtenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onStopEditing}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
